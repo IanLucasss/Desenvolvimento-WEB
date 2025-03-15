@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'youngserif';
+    src: url('youngserif-regular.eot');
+    src: url('youngserif-regular.eot?#iefix') format('embedded-opentype'),
+        url('youngserif-regular.svg#youngserifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.woff2') format('woff2'),
+        url('Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: youngserif;
+    font-size: 250%;
+}
+
+h2 {
+    font-family: youngserif;
+    color: #612d43;
+}
+
+body {
+    background-color: #f3e5d8;
+    justify-content: center;
+    display: flex;
+
+
+}
+
+header {
+    background-color: #fff8fc;
+    border-radius: 10px;
+}
+
+section {
+
+    background-color: white;
+    border-radius: 25px;
+    padding: 40px;
+    margin-left: 360px;
+    margin-right: 360px;
+    margin-top: 120px;
+    font-family: poppins;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+table th, td {
+    padding: 10px;
+    text-align: left; 
+    border-bottom: 1px solid #ddd;
+}
+
+
+table th  {
+    color: #6b433b;
+}
+
+tr:last-child th, tr:last-child td{
+    border-bottom: none;
+}
+
+.image-container {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+}
