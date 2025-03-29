@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 110%;
+    font-style: italic;
+} 
+.principal{
+display: flex;
+text-align: center;
+align-items: center;
+
+}
+.header{
+    background-color: aqua;
+    height: 20vh;
+    text-align: center;
+    align-items: center;
+}
+.conteudo{
+    flex: 4;
+    background-color: pink;
+    height: 50vh;
+}
+.sidebar{
+    flex: 1;
+    background-color: yellow;
+    height: 50vh;
+}
+.parte1{
+    background-color: green;
+}
+.parte2{
+    background-color: green;
+}
+.parte3{
+    background-color: green;
+}
