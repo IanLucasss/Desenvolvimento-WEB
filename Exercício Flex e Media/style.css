@@ -27,12 +27,44 @@ align-items: center;
     background-color: yellow;
     height: 50vh;
 }
+
+.partes{
+    display:flex;
+    text-align:center;
+    align-items: center;
+}
+
 .parte1{
     background-color: green;
+    height: 30vh;
+    flex:1;
+    margin-right: 2px;
 }
 .parte2{
     background-color: green;
+    height: 30vh;
+    flex:3;
 }
 .parte3{
     background-color: green;
+    height: 30vh;
+    flex:1;
+    margin-left: 2px;
+}
+
+@media screen and (max-width: 768px){
+    .principal{
+        flex-direction: column;
+    }
+    .conteudo{
+        flex: 1;
+        height: 50vh;
+    }
+    .sidebar{
+        flex:1;
+        height: 30vh;
+    }
+    .partes{
+        flex-direction: column;
+    }
 }
