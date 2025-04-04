@@ -53,17 +53,8 @@ align-items: center;
 }
 
 @media screen and (max-width: 768px){
-    .principal{
-        flex-direction: column;
-    }
-    .conteudo{
-        flex: 1;
-        height: 50vh;
-    }
-    .sidebar{
-        flex:1;
-        height: 30vh;
-    }
+ 
+
     .partes{
         flex-direction: column;
     }
