@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botões Responsivos com Tailwind</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-sm mx-auto p-4 bg-white rounded-lg shadow-md">
+    <div class="flex flex-col gap-4">
+
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+        Primário
+      </button>
+
+      <button class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded">
+        Secundário
+      </button>
+
+      <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+        Sucesso
+      </button>
+
+      <button class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded flex items-center justify-center gap-2">
+        <i class="fa-solid fa-hippo"></i> Confirmar
+      </button>
+
+      <button class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 w-full rounded text-lg">
+        Botão em bloco (grande)
+      </button>
+
+      <button class="bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 w-full rounded text-sm">
+        Botão
+      </button>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
