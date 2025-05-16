@@ -1,51 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Verificador Par ou Ímpar</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    input, button {
-      padding: 10px;
-      font-size: 16px;
-    }
-    #resultado {
-      margin-top: 20px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de 3 números</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      input, button {
+        padding: 10px;
+        font-size: 16px;
+      }
+      #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
 </head>
 <body>
+    <h1>Calcular média de 3 notas</h1>
+    
+    <!-- caixa de respostas das médias -->
+  <input type="number" id="nota1" placeholder="Digite um número" />
+  <input type="number" id="nota2" placeholder="Digite um número" />
+  <input type="number" id="nota3" placeholder="Digite um número" />
+  <button onclick="Calcular()">Calcular</button>
 
-  <h1>Verificar se é Par ou Ímpar</h1>
-  <input type="number" id="numero" placeholder="Digite um número" />
-  <button onclick="verificar()">Verificar</button>
-
+    <!-- print da resposta final -->
   <div id="resultado"></div>
 
   <script>
-    function verificar() {
-      const num = parseInt(document.getElementById("numero").value);
+    //transformar em Float
+    function Calcular() {
+        const nota1 = parseFloat(document.getElementById("nota1").value);
+        const nota2 = parseFloat(document.getElementById("nota2").value);
+        const nota3 = parseFloat(document.getElementById("nota3").value);
       const resultado = document.getElementById("resultado");
+      
+      //Calcular média
+    const media = ((nota1 + nota2 + nota3) / 3.0).toFixed(2);
 
-      if (isNaN(num)) {
-        resultado.textContent = "Por favor, digite um número válido.";
-        return;
-      }
-
-      if (num % 2 === 0) {
-        resultado.textContent = `O número ${num} é PAR.`;
+      //Diferenciar aprovado de reprovado
+      if (media >=6) {
+        resultado.textContent = `O aluno foi aprovado com média de ${media}`;
       } else {
-        resultado.textContent = `O número ${num} é ÍMPAR.`;
+        resultado.textContent = `O aluno foi reprovado com média de ${media}`;
       }
     }
   </script>
-
 </body>
 </html>
-

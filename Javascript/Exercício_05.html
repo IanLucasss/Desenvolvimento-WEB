@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inversão</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      input {
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+        height: auto;
+      }
+      button {
+        padding: 10px;
+        font-size: 16px;
+        width: 100px;
+        height: 50px;
+      }
+      #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+  <h1>Inversão</h1>
+
+  <input type="text" id="text" placeholder="Digite uma palavra para inverter" />
+  <button onclick="Inverter()">Inverter</button>
+  <div id="resultado"></div>
+
+  <script>
+    function Inverter() {
+      // Pega o elemento onde será mostrado o resultado
+      let resultado = document.getElementById("resultado");
+      // Pega o texto digitado no input
+      let texto = document.getElementById("text").value;
+      // Variável para armazenar a string invertida
+      let invertida = "";
+
+      // Loop começando do último caractere até o primeiro
+      for (let i = texto.length - 1; i >= 0; i--) {
+        invertida += texto[i]; // Adiciona o caractere atual à string invertida
+      }
+
+      // Mostra o resultado na div com id="resultado"
+      resultado.textContent = invertida;
+    }
+  </script>
+</body>
+</html>

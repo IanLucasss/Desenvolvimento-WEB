@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somatória</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      input {
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+        height: auto;
+      }
+      button{
+        padding: 10px;
+        font-size: 16px;
+        width: 100px;
+        height: 50px;
+      }
+      #resultado {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <h1>Somatória</h1>
+
+  <input type="number" id="num1" placeholder="Digite um número para somar " />
+  <button onclick="Somar()">Somar</button>
+  <div id="resultado">0</div>
+
+
+  <script>
+    let somatorio=0;
+    function Somar() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let resultado = document.getElementById("resultado");
+        somatorio = num1+somatorio;
+     
+        if (num1===0){
+            somatorio=0;
+        }
+        resultado.textContent = somatorio;
+    }
+  </script>
+</body>
+</html>

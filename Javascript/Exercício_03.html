@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Tabuadas</title>
+  <title>1 até 100</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <h1>Tabuadas</h1>
+  <h1>1 até 100</h1>
   <input type="number" id="num" placeholder="Digite um número" />
   <button onclick="calcular()">Calcular</button>
 
@@ -40,9 +40,12 @@ function calcular() {
       return;
     }
        resultado.textContent='';
-      for (i=1;i<=10;i++){
-         result=num*i;
-         resultado.textContent +=`${num} * ${i} = ${result} \n`;
+
+      for (num;num<=100;num++){
+         resultado.textContent += `${num}\n`;
+      } 
+      if (num>100){
+        resultado.textContent = "Por favor, digite um número válido.";
       }
 }
   </script>
