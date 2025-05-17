@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qual o maior número?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            height: auto;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+            height: 50px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Qual o maior número?</h1>
+
+    <input type="text" id="text" placeholder="Digite uma lista de valores" />
+    <button onclick="Procurar()">Achar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function Procurar() {
+
+            let resultado = document.getElementById("resultado");
+
+            let text = document.getElementById("text").value;
+            const array = text.split(" ")
+            maiorvalor = Math.max(...array);
+            resultado.textContent = `O maior número é ${maiorvalor}`;
+        }
+    </script>
+</body>
+
+</html>

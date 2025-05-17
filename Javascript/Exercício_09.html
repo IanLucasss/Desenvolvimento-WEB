@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vogais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            height: auto;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+            height: 50px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contador de vogais</h1>
+
+    <input type="text" id="text" placeholder="Digite uma palavra" />
+    <button onclick="Contar()">Contar</button>
+    <div id="resultado"></div>
+
+    <script>
+
+        function Contar() {
+            let resultado = document.getElementById("resultado");
+
+            let text = document.getElementById("text").value;
+            const vogais = text.match(/[aeiou]/gi);
+
+            if (vogais){
+                resultado.textContent = `O número de vogais da palavra é de ${vogais.length}`;
+            } else {
+                resultado.textContent = `Palavra inválida ou não apresenta vogal`;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Tabuadas</title>
@@ -9,10 +10,13 @@
       text-align: center;
       margin-top: 50px;
     }
-    input, button {
+
+    input,
+    button {
       padding: 10px;
       font-size: 16px;
     }
+
     #resultado {
       margin-top: 20px;
       font-size: 20px;
@@ -20,6 +24,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>Tabuadas</h1>
@@ -30,23 +35,23 @@
 
   <script>
 
-function calcular() {
+    function calcular() {
       let num = parseInt(document.getElementById("num").value);
       let resultado = document.getElementById("resultado");
 
 
       if (isNaN(num)) {
         resultado.textContent = "Por favor, digite um número válido.";
-      return;
-    }
-       resultado.textContent='';
-      for (i=1;i<=10;i++){
-         result=num*i;
-         resultado.textContent +=`${num} * ${i} = ${result} \n`;
+        return;
       }
-}
+      resultado.textContent = '';
+      for (i = 1; i <= 10; i++) {
+        result = num * i;
+        resultado.textContent += `${num} * ${i} = ${result} \n`;
+      }
+    }
   </script>
 
 </body>
-</html>
 
+</html>

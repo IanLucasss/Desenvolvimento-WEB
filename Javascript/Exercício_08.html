@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fibonacci</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            height: auto;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+            height: 50px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fibonacci</h1>
+
+    <input type="number" id="number" placeholder="Digite um número" />
+    <button onclick="Gerar()">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+
+        function Gerar() {
+            let resultado = document.getElementById("resultado");
+
+            let number = parseInt(document.getElementById("number").value);
+
+            if (isNaN(number) || number <= 0) {
+                resultado.textContent = "Por favor, digite um número válido.";
+                return;
+            }
+            let sequencia = [];
+            for (let i = 0; i < number; i++) {
+                if (i === 0) sequencia.push(0); //push adiciona um ou mais elementos no final de um array
+
+                else if (i === 1) {
+                    sequencia.push(1);
+                }
+                else {
+                    sequencia.push(sequencia[i - 1] + sequencia[i - 2]);
+                }
+            }
+
+            resultado.textContent = `Sequência de Fibonacci com ${number} termos : ${sequencia.join(", ")}`; //join transforma array em string separando com oq tiver no ("")
+        }
+    </script>
+</body>
+
+</html>
