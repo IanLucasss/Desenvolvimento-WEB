@@ -1,0 +1,91 @@
+/* Estilos gerais */
+body {
+    background-color: #f8f9fa;
+    padding-bottom: 50px;
+}
+
+.titulo {
+    color: #2c3e50;
+    font-weight: 300;
+}
+
+/* Cards de produtos */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    min-height: 3rem;
+}
+
+.card-text {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Barra de busca */
+#form-busca .input-group {
+    width: 300px;
+}
+
+#btn-limpar {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: none; /* Inicialmente escondido */
+}
+
+#input-busca {
+    min-width: 200px;
+}
+
+/* Efeitos de loading */
+.loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 60px;
+    background-color: rgb(196, 196, 196);
+    width: 100%;
+    text-align: center;
+    color: #333;}
